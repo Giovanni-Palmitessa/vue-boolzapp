@@ -8,7 +8,12 @@ body{
     height: 100vh;
     background-image: linear-gradient(
         to bottom,
-        #009788 10%,
-        #D6DBD7 10%
+        #009788 20%,
+        #D6DBD7 20%
     );
+}
+
+.window{
+    max-width: 1200px;
+    height: 80%;
 }
