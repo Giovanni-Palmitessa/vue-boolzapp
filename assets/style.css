@@ -58,3 +58,16 @@ body{
     text-decoration: underline;
     color: gray;
 }
+
+.mycontact{
+    border-bottom: 1px solid gray;
+}
+
+.mycontact img{
+    width: 15%;
+    height: 15%;
+}
+
+.mycontactName p{
+    font-size: 12px;
+}
