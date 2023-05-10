@@ -96,6 +96,10 @@ body{
     font-size: 8px;
 }
 
+.lateralSettings{
+    gap: 0.3rem;
+}
+
 .textMessage{
     background-color: #F3EEEA;
 }

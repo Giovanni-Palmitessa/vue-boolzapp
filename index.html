@@ -40,71 +40,11 @@
                     <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat..." aria-label="Username" aria-describedby="basic-addon1">
                 </div>
 
-                <div class="mycontact d-flex align-items-center">
-                    <img class="rounded-circle me-3" src="assets/img/avatar_1.jpg" alt="1">
+                <div v-for="eleChat in contacts" class="mycontact d-flex align-items-center">
+                    <img class="rounded-circle me-3" :src="eleChat.avatar" alt="1">
 
                     <div class="mycontactName py-3">
-                        <p class="mb-0">Michele</p>
-
-                        <p class="mb-0">Ultimo messagio inviato</p>
-                    </div>
-                </div>
-
-                <div class="mycontact d-flex align-items-center">
-                    <img class="rounded-circle me-3" src="assets/img/avatar_2.jpg" alt="1">
-
-                    <div class="mycontactName py-3">
-                        <p class="mb-0">Francesco</p>
-
-                        <p class="mb-0">Ultimo messagio inviato</p>
-                    </div>
-                </div>
-
-                <div class="mycontact d-flex align-items-center">
-                    <img class="rounded-circle me-3" src="assets/img/avatar_3.jpg" alt="1">
-
-                    <div class="mycontactName py-3">
-                        <p class="mb-0">Giuseppe</p>
-
-                        <p class="mb-0">Ultimo messagio inviato</p>
-                    </div>
-                </div>
-
-                <div class="mycontact d-flex align-items-center">
-                    <img class="rounded-circle me-3" src="assets/img/avatar_4.jpg" alt="1">
-
-                    <div class="mycontactName py-3">
-                        <p class="mb-0">Vcieèèè</p>
-
-                        <p class="mb-0">Ultimo messagio inviato</p>
-                    </div>
-                </div>
-
-                <div class="mycontact d-flex align-items-center">
-                    <img class="rounded-circle me-3" src="assets/img/avatar_5.jpg" alt="1">
-
-                    <div class="mycontactName py-3">
-                        <p class="mb-0">Armando</p>
-
-                        <p class="mb-0">Ultimo messagio inviato</p>
-                    </div>
-                </div>
-
-                <div class="mycontact d-flex align-items-center">
-                    <img class="rounded-circle me-3" src="assets/img/avatar_5.jpg" alt="1">
-
-                    <div class="mycontactName py-3">
-                        <p class="mb-0">Armando</p>
-
-                        <p class="mb-0">Ultimo messagio inviato</p>
-                    </div>
-                </div>
-
-                <div class="mycontact d-flex align-items-center">
-                    <img class="rounded-circle me-3" src="assets/img/avatar_5.jpg" alt="1">
-
-                    <div class="mycontactName py-3">
-                        <p class="mb-0">Armando</p>
+                        <p class="mb-0">{{ eleChat.name }}</p>
 
                         <p class="mb-0">Ultimo messagio inviato</p>
                     </div>
@@ -122,7 +62,7 @@
                             <p class="mb-0">Ultimo accesso oggi alle 12:00</p>
                         </div>
 
-                        <div class="lateralSettings">
+                        <div class="lateralSettings d-flex">
                             <i class="fa-solid fa-magnifying-glass icon"></i>
 
                             <i class="fa-solid fa-paperclip icon"></i>
