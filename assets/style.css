@@ -14,6 +14,20 @@ body{
 }
 
 .window{
-    max-width: 1200px;
+    max-width: 1000px;
+    margin-inline: auto;
     height: 600px;
+}
+
+.userName{
+    background-color: #EAEAEA;
+    gap: 0.2rem;
+}
+
+.userName img{
+    width: 50px;
+}
+
+.icon{
+    color: gray;
 }
