@@ -19,6 +19,14 @@ body{
     height: 600px;
 }
 
+.contacts{
+    width: 30%;
+}
+
+.message{
+    width: 70%;
+}
+
 .userName{
     background-color: #EAEAEA;
     gap: 0.2rem;
@@ -29,5 +37,24 @@ body{
 }
 
 .icon{
+    color: gray;
+}
+
+.silenceNotification{
+    background-color: #8EDAFC;
+}
+
+.bell{
+    color: aliceblue;
+    font-size: 40px;
+}
+
+#new-message{
+    font-size: 12px;
+}
+
+#desktop-notification{
+    font-size: 10px;
+    text-decoration: underline;
     color: gray;
 }
