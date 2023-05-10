@@ -16,21 +16,24 @@ body{
 .window{
     max-width: 1000px;
     margin-inline: auto;
-    height: 600px;
+    height: 90vh;
 }
 
 .contacts{
     width: 30%;
+    height: 100%;
 }
 
 .message{
     width: 70%;
+    height: 100%;
 }
 
 .userName{
     background-color: #EAEAEA;
     gap: 0.4rem;
     height: 60px;
+    border: 1px solid gray;
 }
 
 .userName img{
@@ -73,4 +76,26 @@ body{
 
 .mycontactName p{
     font-size: 12px;
+}
+
+.chat{
+    background-image: url(img/mine.jpg);
+    height: 80%;
+}
+
+.msg-received{
+    background-color: white;
+}
+
+.msg-send{
+    background-color: #D5F9BB;
+}
+
+.time{
+    color: gray;
+    font-size: 8px;
+}
+
+.textMessage{
+    background-color: #F3EEEA;
 }
