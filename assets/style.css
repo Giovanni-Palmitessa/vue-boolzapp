@@ -52,7 +52,7 @@ body{
     display: none;
 }
 
-.message .userActive img.active{
+.message .userActive img.activeimg{
     display: block;
 }
 
