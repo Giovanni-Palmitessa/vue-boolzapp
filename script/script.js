@@ -185,6 +185,8 @@ const app = Vue.createApp({
             };
             this.contacts[this.activeIndex].messages.push(newMex);
 
+            newMex = '';
+
         },
     },
 });
