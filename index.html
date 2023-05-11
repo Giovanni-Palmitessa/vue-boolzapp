@@ -97,18 +97,18 @@
 
                         <div class="time">{{message.date}}</div>
                     </div>
-
-                    <!-- <div class="sent p-3 mb-2 rounded">
-                        <span>Tutto fatto!</span>
-
-                        <div class="time">16:35</div>
-                    </div> -->
                 </div>
 
                 <div class="textMessage d-flex p-2 align-items-center">
                     <i class="fa-solid fa-face-smile icon pe-2"></i>
 
-                    <input class="flex-grow-1" type="text" placeholder="Scrivi un messaggio">
+                    <input 
+                        class="flex-grow-1" 
+                        type="text" 
+                        placeholder="Scrivi un messaggio"
+                        v-model="newMessage"
+                        @keyup.enter="addMessage(newMessage)"
+                    >
 
                     <i class="fa-solid fa-microphone icon ps-2"></i>
                 </div>
