@@ -94,11 +94,13 @@ body{
 .received{
     background-color: white;
     align-self: flex-start;
+    margin-bottom: 10px;
 }
 
 .sent{
     background-color: #D5F9BB;
     align-self: flex-end;
+    margin-bottom: 10px;
 }
 
 .time{
