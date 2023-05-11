@@ -22,11 +22,19 @@ body{
 .contacts{
     width: 30%;
     height: 100%;
+    overflow-y: auto;
 }
 
 .message{
     width: 70%;
     height: 100%;
+}
+
+.lastMessage{
+    max-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .userName{
@@ -83,17 +91,20 @@ body{
     height: 80%;
 }
 
-.msg-received{
+.received{
     background-color: white;
+    align-self: flex-start;
 }
 
-.msg-send{
+.sent{
     background-color: #D5F9BB;
+    align-self: flex-end;
 }
 
 .time{
     color: gray;
     font-size: 8px;
+    text-align: end;
 }
 
 .lateralSettings{
@@ -102,4 +113,5 @@ body{
 
 .textMessage{
     background-color: #F3EEEA;
+    height: 10%;
 }
