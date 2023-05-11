@@ -163,12 +163,17 @@ const app = Vue.createApp({
                         }
                     ],
                 }
-            ]
+            ],
+
+            activeIndex: 0,
             
         }
     },
     methods: {
-        
+        currentChat(index) {
+            this.activeIndex = index
+            console.log('Hai cliccato: ' + index)
+        }
     },
 });
 

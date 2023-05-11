@@ -40,8 +40,12 @@
                     <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat..." aria-label="Username" aria-describedby="basic-addon1">
                 </div>
 
-                <div v-for="(eleChat, i) in contacts" class="mycontact d-flex align-items-center">
-                    <img class="rounded-circle me-3" :src="eleChat.avatar" alt="1">
+                <div 
+                v-for="(eleChat, i) in contacts" 
+                class="mycontact d-flex align-items-center"
+                @click="currentChat(i)"
+                >
+                    <img class="rounded-circle me-3" :src="eleChat.avatar" :alt="eleChat.name">
 
                     <div class="mycontactName py-3">
                         <p class="mb-0">{{ eleChat.name }}</p>
@@ -52,12 +56,22 @@
             </div>
 
             <div class="message">
-                <div class="userName">
+                <div class="userName userActiveimg">
                     <div class="d-flex align-items-center">
-                        <img class="rounded-circle me-3" src="assets/img/avatar_1.jpg" alt="1">
+                        <img 
+                            v-for="(element, i) in contacts" class="rounded-circle me-3" 
+                            :src="element.avatar" 
+                            :alt="element.name"
+                            :class="{active: i == activeIndex}"
+                        >
     
                         <div class="mycontactName py-3 flex-grow-1">
-                            <p class="mb-0">Michele</p>
+                            <p 
+                                class="mb-0 userActivep"
+                                v-for="(elementp, i) in contacts"
+                                :class="{active: i == activeIndex}"
+                            >
+                            {{ elementp.name }}</p>
     
                             <p class="mb-0">Ultimo accesso oggi alle 12:00</p>
                         </div>
