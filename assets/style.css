@@ -48,24 +48,6 @@ body{
     width: 50px;
 }
 
-.message .userActiveimg img{
-    display: none;
-}
-
-.message .userActive img.activeimg{
-    display: block;
-}
-
-.message .userName .userActivep {
-    display: none;
-}
-
-.message .userName .userActivep.active {
-    display: block;
-}
-
-
-
 .icon{
     color: gray;
     font-size: 1.2rem;

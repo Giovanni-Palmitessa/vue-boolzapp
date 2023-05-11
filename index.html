@@ -59,19 +59,19 @@
                 <div class="userName userActiveimg">
                     <div class="d-flex align-items-center">
                         <img 
-                            v-for="(element, i) in contacts" class="rounded-circle me-3" 
-                            :src="element.avatar" 
-                            :alt="element.name"
-                            :class="{activeimg: i == activeIndex}"
+                             class="rounded-circle me-3" 
+                            :src="contacts[activeIndex].avatar" 
+                            :alt="contacts[activeIndex].name"
+                            
                         >
     
                         <div class="mycontactName py-3 flex-grow-1">
                             <p 
-                                class="mb-0 userActivep"
-                                v-for="(elementp, i) in contacts"
-                                :class="{active: i == activeIndex}"
+                                
+                                class="mb-0"
+                                
                             >
-                            {{ elementp.name }}</p>
+                            {{ contacts[activeIndex].name }}</p>
     
                             <p class="mb-0">Ultimo accesso oggi alle 12:00</p>
                         </div>
