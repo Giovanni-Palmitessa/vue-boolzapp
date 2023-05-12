@@ -195,7 +195,7 @@ const app = Vue.createApp({
 
         pcMessage() {
             let pcMex = {
-                date: 'formatDate',
+                date: "dsaasdadsasdasdad",
                 message: 'Ok',
                 status: 'received',
             };
