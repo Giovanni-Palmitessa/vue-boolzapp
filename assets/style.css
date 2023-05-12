@@ -77,6 +77,10 @@ body{
     border-bottom: 1px solid gray;
 }
 
+.mycontact:hover{
+    cursor: pointer;
+}
+
 .mycontact.active{
     background-color: gainsboro;
 }
