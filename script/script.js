@@ -182,7 +182,7 @@ const app = Vue.createApp({
 
         addMessage(nuovoMessaggio) {
             let newMex = {
-                date: '20/03/2020 16:35:00',
+                date: this.formatDate(),
                 message: nuovoMessaggio,
                 status: 'sent',
             };
@@ -195,7 +195,7 @@ const app = Vue.createApp({
 
         pcMessage() {
             let pcMex = {
-                date: "dsaasdadsasdasdad",
+                date: this.formatDate(),
                 message: 'Ok',
                 status: 'received',
             };
@@ -207,7 +207,7 @@ const app = Vue.createApp({
         }, 
 
         formatDate() {
-            luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss');
+            return luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss');
         }
     },
     computed: {
