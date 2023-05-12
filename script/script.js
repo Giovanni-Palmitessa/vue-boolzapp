@@ -188,7 +188,7 @@ const app = Vue.createApp({
             };
             this.contacts[this.activeIndex].messages.push(newMex);
 
-            newMex.value = '';
+            this.newMessage= '';
 
             setTimeout(this.pcMessage, 1000);
         },
