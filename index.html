@@ -63,33 +63,29 @@
             </div>
 
             <div class="message">
-                <div class="userName">
-                    <div class="d-flex align-items-center">
-                        <img 
-                             class="rounded-circle me-3" 
-                            :src="contacts[activeIndex].avatar" 
-                            :alt="contacts[activeIndex].name"
-                            
-                        >
+                <div class=" userName d-flex align-items-center px-1">
+                     <img 
+                        class="rounded-circle me-3" 
+                        :src="contacts[activeIndex].avatar" 
+                        :alt="contacts[activeIndex].name"
+                    >
     
-                        <div class="mycontactName py-3 flex-grow-1">
+                    <div class="mycontactName py-3 flex-grow-1">
                             <p class="mb-0" v-cloak>
                             {{ contacts[activeIndex].name }}</p>
     
                             <p class="mb-0" v-cloak>Ultimo accesso oggi alle 12:00</p>
-                        </div>
+                    </div>
 
-                        <div class="lateralSettings d-flex">
+                    <div class="lateralSettings d-flex">
                             <i class="fa-solid fa-magnifying-glass icon"></i>
 
                             <i class="fa-solid fa-paperclip icon"></i>
 
                             <i class="fa-solid fa-ellipsis-vertical icon"></i>
-                        </div>
                     </div>
-                
                 </div>
-
+                
                 <div class="chat d-flex flex-column p-3">
                     <div 
                         class="p-3 rounded"
