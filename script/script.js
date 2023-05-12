@@ -203,11 +203,11 @@ const app = Vue.createApp({
                 message: 'Ok',
                 status: 'received',
             };
-            this.contacts[this.newIndex].messages.push(pcMex);
+            this.filterContact[this.newIndex].messages.push(pcMex);
         },
 
         deleteMessage(index){
-            this.contacts[this.activeIndex].messages.splice(index, 1);
+            this.filterContact[this.activeIndex].messages.splice(index, 1);
         }, 
 
         formatDate() {
