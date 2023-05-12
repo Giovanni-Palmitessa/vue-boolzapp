@@ -44,7 +44,7 @@
                 v-for="(eleChat, i) in contacts" 
                 class="mycontact d-flex align-items-center"
                 @click="currentChat(i)"
-                :key="eleChat.messsages.message"
+                :key="eleChat.message"
                 >
                     <img class="rounded-circle me-3" :src="eleChat.avatar" :alt="eleChat.name">
 
@@ -97,7 +97,7 @@
                     >
                         <span>{{message.message}}</span>
 
-                        <div class="time">{{message.date}}</div>
+                        <div class="time">{{message.date.substring(11)}}</div>
                     </div>
                 </div>
 
