@@ -66,13 +66,13 @@
                 <div class=" userName d-flex align-items-center px-2">
                      <img 
                         class="rounded-circle me-3" 
-                        :src="contacts[activeIndex].avatar" 
-                        :alt="contacts[activeIndex].name"
+                        :src="filterContact[activeIndex].avatar" 
+                        :alt="filterContact[activeIndex].name"
                     >
     
                     <div class="mycontactName py-3 flex-grow-1">
                             <p class="mb-0" v-cloak>
-                            {{ contacts[activeIndex].name }}</p>
+                            {{ filterContact[activeIndex].name }}</p>
     
                             <p class="mb-0" v-cloak>Ultimo accesso: {{ contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1].date }}</p>
                     </div>

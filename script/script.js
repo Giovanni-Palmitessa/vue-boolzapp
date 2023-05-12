@@ -170,6 +170,8 @@ const app = Vue.createApp({
             newMessage: '',
 
             searchStr: '',
+
+            newIndex: 0,
             
         }
     },
@@ -188,6 +190,8 @@ const app = Vue.createApp({
             };
             this.contacts[this.activeIndex].messages.push(newMex);
 
+            this.newIndex = this.activeIndex;
+
             this.newMessage= '';
 
             setTimeout(this.pcMessage, 1000);
@@ -199,7 +203,7 @@ const app = Vue.createApp({
                 message: 'Ok',
                 status: 'received',
             };
-            this.contacts[this.activeIndex].messages.push(pcMex);
+            this.contacts[this.newIndex].messages.push(pcMex);
         },
 
         deleteMessage(index){
