@@ -100,6 +100,11 @@ body{
     overflow-y: auto;
 }
 
+.delete{
+    cursor: pointer;
+}
+
+
 .received{
     background-color: white;
     align-self: flex-start;

@@ -92,11 +92,13 @@
                 <div class="chat d-flex flex-column p-3">
                     <div 
                         class="p-3 rounded"
-                        v-for="message in contacts[activeIndex].messages"
+                        v-for="(message, index) in contacts[activeIndex].messages"
                         :class="message.status == 'sent' ? 'sent' : 'received' "
                         :key="message.avatar"
                     >
                         <span v-cloak>{{message.message}}</span>
+
+                        <span class="delete mx-1" @click="deleteMessage(index)"><i class="fa-solid fa-skull-crossbones"></i></span>
 
                         <div class="time" v-cloak>{{message.date.substring(11)}}</div>
                     </div>

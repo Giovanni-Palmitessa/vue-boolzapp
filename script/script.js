@@ -200,6 +200,10 @@ const app = Vue.createApp({
                 status: 'received',
             };
             this.contacts[this.activeIndex].messages.push(pcMex);
+        },
+
+        deleteMessage(index){
+            this.contacts[this.activeIndex].messages.splice(index, 1);
         }
     },
     computed: {
