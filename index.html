@@ -17,7 +17,7 @@
     <main>
         <div class="window d-flex justify-content-center align-items-start pt-5" v-cloak>
             <div class="contacts">
-                <div class="userName d-flex align-items-center">
+                <div class="userName d-flex align-items-center px-2">
                     <img class="rounded-circle" src="assets/img/avatar_1.jpg" alt="User Image">
 
                     <p class="mb-0 flex-grow-1">Giovanni Palmi</p>
@@ -63,7 +63,7 @@
             </div>
 
             <div class="message">
-                <div class=" userName d-flex align-items-center px-1">
+                <div class=" userName d-flex align-items-center px-2">
                      <img 
                         class="rounded-circle me-3" 
                         :src="contacts[activeIndex].avatar" 
@@ -74,7 +74,7 @@
                             <p class="mb-0" v-cloak>
                             {{ contacts[activeIndex].name }}</p>
     
-                            <p class="mb-0" v-cloak>Ultimo accesso oggi alle 12:00</p>
+                            <p class="mb-0" v-cloak>Ultimo accesso: {{ contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1].date }}</p>
                     </div>
 
                     <div class="lateralSettings d-flex">
