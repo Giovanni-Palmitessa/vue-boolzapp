@@ -195,7 +195,7 @@ const app = Vue.createApp({
 
         pcMessage() {
             let pcMex = {
-                date: '10/10/22 15.00.30',
+                date: 'formatDate',
                 message: 'Ok',
                 status: 'received',
             };
@@ -206,7 +206,9 @@ const app = Vue.createApp({
             this.contacts[this.activeIndex].messages.splice(index, 1);
         }, 
 
-        
+        formatDate() {
+          return  luxon.DateTime.now().toFormat('dd/MM/yyyy hh:mm:ss');
+        }
     },
     computed: {
         filterContact() {
