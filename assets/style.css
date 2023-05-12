@@ -77,6 +77,10 @@ body{
     border-bottom: 1px solid gray;
 }
 
+.mycontact.active{
+    background-color: gainsboro;
+}
+
 .mycontact img{
     width: 15%;
     height: 15%;

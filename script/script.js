@@ -172,8 +172,9 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        currentChat(index) {
-            this.activeIndex = index
+        currentChat(element, index) {
+            this.contacts.indexOf(element);
+            this.activeIndex = index;
             console.log('Hai cliccato: ' + index)
         },
 
