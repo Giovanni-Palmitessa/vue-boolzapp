@@ -168,6 +168,8 @@ const app = Vue.createApp({
             activeIndex: 0,
 
             newMessage: '',
+
+            searchStr: '',
             
         }
     },
@@ -200,6 +202,13 @@ const app = Vue.createApp({
             this.contacts[this.activeIndex].messages.push(pcMex);
         }
     },
+    computed: {
+        filterContact() {
+            return this.contacts.filter((contacts) => {
+                return contacts.name.toLowerCase().includes(this.searchStr.toLowerCase())
+            })
+        },
+    }
 });
 
 app.mount('.window');

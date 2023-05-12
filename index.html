@@ -38,11 +38,14 @@
                 </div>
 
                 <div class="searchbar">
-                    <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat..." aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat..." aria-label="Username" aria-describedby="basic-addon1"
+                    v-model="searchStr"
+                >
+                    
                 </div>
 
                 <div 
-                v-for="(eleChat, i) in contacts" 
+                v-for="(eleChat, i) in filterContact" 
                 class="mycontact d-flex align-items-center"
                 :class="{active: i == activeIndex}"
                 @click="currentChat(eleChat, i)"
