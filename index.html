@@ -54,7 +54,7 @@
                 <div 
                 v-for="(eleChat, i) in filterContact" 
                 class="mycontact d-flex align-items-center"
-                :class="{active: i == activeIndex}"
+                :class="{active: eleChat == contacts[activeIndex]}"
                 @click="currentChat(eleChat, i)"
                 :key="eleChat.message"
                 >
@@ -63,7 +63,7 @@
                     <div class="mycontactName py-3">
                         <p class="mb-0" v-cloak>{{ eleChat.name }}</p>
 
-                        <p class="mb- lastMessage" v-cloak>{{ eleChat.messages[eleChat.messages.length - 1].message }}</p>
+                        <p class="mb- lastMessage" v-cloak>{{ eleChat.messages.length != 0 ? eleChat.messages[eleChat.messages.length - 1].message : '' }}</p>
                     </div>
                 </div>
             </div>
@@ -74,15 +74,15 @@
                 <div class=" userName d-flex align-items-center px-2">
                     <img 
                         class="rounded-circle me-3" 
-                        :src="filterContact[activeIndex].avatar" 
-                        :alt="filterContact[activeIndex].name"
+                        :src="contacts[activeIndex].avatar" 
+                        :alt="contacts[activeIndex].name"
                     >
     
                     <div class="mycontactName py-3 flex-grow-1">
                             <p class="mb-0" v-cloak>
-                            {{ filterContact[activeIndex].name }}</p>
+                            {{ contacts[activeIndex].name }}</p>
     
-                            <p class="mb-0" v-cloak>Ultimo accesso: {{ filterContact[activeIndex].messages[filterContact[activeIndex].messages.length - 1].date }}</p>
+                            <p class="mb-0" v-cloak>Ultimo accesso: {{ contacts[activeIndex].messages.length ? contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1].date : '' }}</p>
                     </div>
 
                     <div class="lateralSettings d-flex">
@@ -98,7 +98,7 @@
                 <div class="chat d-flex flex-column p-3">
                     <div 
                         class="p-3 rounded"
-                        v-for="(message, index) in filterContact[activeIndex].messages"
+                        v-for="(message, index) in contacts[activeIndex].messages"
                         :class="message.status == 'sent' ? 'sent' : 'received' "
                         :key="message.avatar"
                     >

@@ -177,9 +177,10 @@ const app = Vue.createApp({
     },
     methods: {
         currentChat(element, index) {
-            this.contacts.indexOf(element);
-            this.activeIndex = index;
-            console.log('Hai cliccato: ' + index)
+            const newActiveIndex = this.contacts.indexOf(element);
+            this.activeIndex = newActiveIndex;
+            console.log('Index in contatti filtrati: ' + index);
+            console.log('Index in contacts: ' + newActiveIndex);
         },
 
         addMessage(nuovoMessaggio) {
