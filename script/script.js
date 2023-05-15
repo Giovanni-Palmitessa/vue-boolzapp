@@ -201,14 +201,14 @@ const app = Vue.createApp({
         pcMessage() {
             let pcMex = {
                 date: this.formatDate(),
-                message: 'Ok',
+                message: 'OK va bene!',
                 status: 'received',
             };
             this.filterContact[this.newIndex].messages.push(pcMex);
         },
 
         deleteMessage(index){
-            this.filterContact[this.activeIndex].messages.splice(index, 1);
+            this.contacts[this.activeIndex].messages.splice(index, 1);
         }, 
 
         formatDate() {
