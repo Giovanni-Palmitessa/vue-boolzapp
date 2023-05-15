@@ -79,6 +79,7 @@ body{
 
 .mycontact:hover{
     cursor: pointer;
+    background-color: azure;
 }
 
 .mycontact.active{
