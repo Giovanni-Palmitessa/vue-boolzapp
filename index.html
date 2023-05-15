@@ -15,8 +15,11 @@
 </head>
 <body>
     <main>
+        <!-- PARTE PRINCIPALE MONTAGGIO VUE JS -->
         <div class="window d-flex justify-content-center align-items-start pt-5" v-cloak>
+            <!-- PARTE LATERALE DEI CONTATTI -->
             <div class="contacts">
+                <!-- USERNAME - FISSO -->
                 <div class="userName d-flex align-items-center px-2">
                     <img class="rounded-circle" src="assets/img/avatar_1.jpg" alt="User Image">
 
@@ -29,6 +32,7 @@
                     <i class="fa-solid fa-ellipsis-vertical icon"></i>
                 </div>
 
+                <!-- SILENZIA NOTIFICHE - FISSO -->
                 <div class="silenceNotification p-2 d d-flex align-items-cente">
                     <i class="fa-solid fa-bell-slash bell"></i>
                     <div class="messageNews">
@@ -38,13 +42,15 @@
                     </div>
                 </div>
 
+
+                <!-- SEARCHBAR DINAMICA PER FILTRARE CONTATTI -->
                 <div class="searchbar">
                     <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat..." aria-label="Username" aria-describedby="basic-addon1"
                     v-model="searchStr"
-                >
-                    
+                >     
                 </div>
 
+                <!-- CONTATTI DINAMICI RIPETUTI CON V-FOR -->
                 <div 
                 v-for="(eleChat, i) in filterContact" 
                 class="mycontact d-flex align-items-center"
@@ -62,9 +68,11 @@
                 </div>
             </div>
 
+            <!-- PARTE PRINCIPALE DELLA CHAT -->
             <div class="message">
+                <!-- USERNAME DELLA CHAT CLICCATA -->
                 <div class=" userName d-flex align-items-center px-2">
-                     <img 
+                    <img 
                         class="rounded-circle me-3" 
                         :src="filterContact[activeIndex].avatar" 
                         :alt="filterContact[activeIndex].name"
@@ -86,6 +94,7 @@
                     </div>
                 </div>
                 
+                <!-- CHAT E MESSAGGI SCAMBIATI -->
                 <div class="chat d-flex flex-column p-3">
                     <div 
                         class="p-3 rounded"
@@ -101,6 +110,7 @@
                     </div>
                 </div>
 
+                <!-- INPUT PER MANDARE MESSAGGI -->
                 <div class="textMessage d-flex p-2 align-items-center">
                     <i class="fa-solid fa-face-smile icon pe-2"></i>
 
